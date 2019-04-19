@@ -1,0 +1,198 @@
+.container {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 0.1fr 0.1fr 0.5fr 0.75fr;
+   grid-template-areas:
+      "menu1 . menu2 menu2"
+      ". . . ."
+      "card1 card2 card3 sidebar"
+      "main main main sidebar";
+   min-height: 100vh;
+}
+
+.menu1 {
+   grid-area: menu1;
+   border: solid 1px salmon;
+   padding: 10px;
+   margin: 10px;
+   background-color: salmon;
+ }
+
+.menu2 {
+   grid-area: menu2;
+   border: solid 1px yellow;
+   padding: 10px;
+   margin: 10px;
+   background-color: yellow;
+}
+
+.card1 {
+   grid-area: card1;
+   border: solid 1px lightblue;
+   padding: 10px;
+   margin: 10px;
+   background-color: lightblue;
+}
+
+.card2 {
+   grid-area: card2;
+   border: solid 1px lightblue;
+   padding: 10px;
+   margin: 10px;
+   background-color: lightblue;
+}
+
+.card3 {
+   grid-area: card3;
+   border: solid 1px lightblue;
+   padding: 10px;
+   margin: 10px;
+   background-color: lightblue;
+}
+
+.aside {
+   grid-area: sidebar;
+   border: solid 1px gray;
+   padding: 10px;
+   margin: 10px;
+   background-color: gray;
+}
+
+.main {
+   grid-area: main;
+   border: solid 1px lightblue;
+   padding: 10px;
+   margin: 10px;
+   background-color: lightblue;
+}
+
+@media (max-width: 1024px) {
+   .container {
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 0.2fr 0.1fr 0.75fr 0.5fr 1fr;
+   grid-template-areas:
+      "menu1 . menu2 menu2"
+      "sidebar sidebar sidebar sidebar"
+      "card1 card1 card2 card2"
+      "card3 card3 card3 card3"
+      "main main main main";
+}
+.menu1 {
+   grid-area: menu1;
+   border: solid 1px salmon;
+   padding: 5px;
+   margin: 5px;
+   background-color: salmon;
+ }
+
+.menu2 {
+   grid-area: menu2;
+   border: solid 1px yellow;
+   padding: 5x;
+   margin: 5px;
+   background-color: yellow;
+}
+
+.card1 {
+   grid-area: card1;
+   border: solid 1px lightblue;
+   padding: 5px;
+   margin: 5px;
+   background-color: lightblue;
+}
+
+.card2 {
+   grid-area: card2;
+   border: solid 1px lightblue;
+   padding: 5px;
+   margin: 5px;
+   background-color: lightblue;
+}
+
+.card3 {
+   grid-area: card3;
+   border: solid 1px lightblue;
+   padding: 5px;
+   margin: 5px;
+   background-color: lightblue;
+}
+
+.aside {
+   grid-area: sidebar;
+   border: solid 1px gray;
+   padding: 5px;
+   margin: 5px;
+   background-color: gray;
+}
+.main {
+   grid-area: main;
+   border: solid 1px lightblue;
+   padding: 5px;
+   margin: 5px;
+   background-color: lightblue;
+}
+}
+
+@media (max-width: 480px) {
+.container {
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 0.05fr 0.05fr 0.5fr 0.5fr 0.5fr 0.75fr;
+   grid-template-areas:
+      "menu1 ."
+      "menu2 menu2"
+      "card1 card1"
+      "card2 card2"
+      "card3 card3"
+      "main main";
+}
+.menu1 {
+   grid-area: menu1;
+   border: solid 1px salmon;
+   padding: 5px;
+   margin: 5px;
+   background-color: salmon;
+ }
+
+.menu2 {
+   grid-area: menu2;
+   border: solid 1px yellow;
+   padding: 5px;
+   margin: 5px;
+   background-color: yellow;
+}
+
+.card1 {
+   grid-area: card1;
+   border: solid 1px lightblue;
+   padding: 5px;
+   margin: 5px;
+   background-color: lightblue;
+}
+
+.card2 {
+   grid-area: card2;
+   border: solid 1px lightblue;
+   padding: 5px;
+   margin: 5px;
+   background-color: lightblue;
+}
+
+.card3 {
+   grid-area: card3;
+   border: solid 1px lightblue;
+   padding: 5px;
+   margin: 5px;
+   background-color: lightblue;
+}
+
+.aside {
+   display: none;
+}
+.main {
+   grid-area: main;
+   border: solid 1px lightblue;
+   padding: 5px;
+   margin: 5px;
+   background-color: lightblue;
+}
+}
