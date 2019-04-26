@@ -1,0 +1,274 @@
+body {
+  background-color: #FFFFFF;
+  margin: 0px;
+}
+
+nav {
+  background-color: #7A6E57;
+  padding: 5px;
+  font-family: 'Raleway', sans-serif;
+  }
+
+h1 {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  color: #383D3B;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  color: #383D3B;
+}
+
+.description, .storyback {
+  margin: 1em;
+  text-align: justify;
+  color: #383D3B;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.card1, .card2, .card3, .card4,
+.card5, .card6, .card7, .card8{
+  border-style: groove;
+  border-radius: 5px;
+  float: left;
+  margin: 0.5em;
+  background-color: #52DEE5;
+  text-align: center;
+  color: #383D3B;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.story_card {
+  float:left;
+  border-radius: 5px;
+  margin: 1em;
+  background-color: #52DEE5;
+  text-align: center;
+  color: #383D3B;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.storydescription1, .storydescription2, .storydescription3,
+.storydescription4, .storydescription5, .storydescription6 {
+  color: #383D3B;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.author_link {
+  text-align: center;
+  color: #383D3B;
+  font-family: 'Roboto', sans-serif;
+}
+
+.story1, .story2, .story3 {
+  border: solid 1px #383D3B;
+  border-width: thick;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.picture {
+  padding: 5px;
+  margin: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.author_bio {
+  vertical-align: top;
+  border: solid 1px #383D3B;
+  border-width: thick;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.author_works {
+  vertical-align: top;
+  border: solid 1px #383D3B;
+  border-width: thick;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.container1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 0.1fr 1fr 1fr;
+  grid-template-areas:
+  "nav nav nav nav"
+  "header header header header"
+  ". categories categories ."
+  "card1 card2 card3 card4"
+  "card5 card6 card7 card8";
+}
+nav {grid-area: nav;}
+.header {grid-area: header;}
+.categories {grid-area: categories;}
+.card1 {grid-area: card1;}
+.card2 {grid-area: card2;}
+.card3 {grid-area: card3;}
+.card4 {grid-area: card4;}
+.card5 {grid-area: card5;}
+.card6 {grid-area: card6;}
+.card7 {grid-area: card7;}
+.card8 {grid-area: card8;}
+
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr  1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "nav nav nav nav"
+  "header header header header"
+  "storycard1 storydescription1 storycard2 storydescription2"
+  "storycard3 storydescription3 storycard4 storydescription4"
+  "storycard5 storydescription5 storycard6 storydescription6"
+}
+nav {grid-area: nav;}
+.header {grid-area: header;}
+.storycard1 {grid-area: storycard1;}
+.storycard2 {grid-area: storycard2;}
+.storycard3 {grid-area: storycard3;}
+.storydescription1 {grid-area: storydescription1;}
+.storydescription2 {grid-area: storydescription2;}
+.storydescription3 {grid-area: storydescription3;}
+.storycard4 {grid-area: storycard4;}
+.storycard5 {grid-area: storycard5;}
+.storycard6 {grid-area: storycard6;}
+.storydescription4 {grid-area: storydescription4;}
+.storydescription5 {grid-area: storydescription5;}
+.storydescription6 {grid-area: storydescription6;}
+
+.container3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "nav"
+  "header"
+  "story1"
+  "story2"
+  "story3"
+}
+nav {grid-area: nav;}
+.header {grid-area: header;}
+.story1 {grid-area: story1;}
+.story2 {grid-area: story2;}
+.story3 {grid-area: story3;}
+
+.container4 {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  grid-template-rows: 0.1fr 0.1fr 1fr 1fr 0.1fr;
+  grid-template-areas:
+  "nav nav"
+  "header header"
+  "author_bio author_works"
+  "author_bio ."
+  "storyback ."
+}
+nav {grid-area: nav;}
+.header {grid-area: header;}
+.author_bio {grid-area: author_bio;}
+.author_works {grid-area: author_works;}
+.storyback {grid-area: storyback;}
+
+@media (max-width: 768px) {
+.container1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 0.1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "nav nav"
+  "header header"
+  "categories categories"
+  "card1 card2"
+  "card3 card4"
+  "card5 card6"
+  "card7 card8";
+}
+nav {grid-area: nav;}
+.header {grid-area: header;}
+.categories {grid-area: categories;}
+.card1 {grid-area: card1;}
+.card2 {grid-area: card2;}
+.card3 {grid-area: card3;}
+.card4 {grid-area: card4;}
+.card5 {grid-area: card5;}
+.card6 {grid-area: card6;}
+.card7 {grid-area: card7;}
+.card8 {grid-area: card8;}
+
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+  grid-template-rows: 0.1fr 0.1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "nav nav"
+  "header header"
+  "storycard1 storydescription1"
+  "storycard2 storydescription2"
+  "storycard3 storydescription3"
+  "storycard4 storydescription4"
+  "storycard5 storydescription5"
+  "storycard6 storydescription6"
+}
+nav {grid-area: nav;}
+.header {grid-area: header;}
+.storycard1 {grid-area: storycard1;}
+.storycard2 {grid-area: storycard2;}
+.storycard3 {grid-area: storycard3;}
+.storydescription1 {grid-area: storydescription1;}
+.storydescription2 {grid-area: storydescription2;}
+.storydescription3 {grid-area: storydescription3;}
+.storycard4 {grid-area: storycard4;}
+.storycard5 {grid-area: storycard5;}
+.storycard6 {grid-area: storycard6;}
+.storydescription4 {grid-area: storydescription4;}
+.storydescription5 {grid-area: storydescription5;}
+.storydescription6 {grid-area: storydescription6;}
+
+.container3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "nav"
+  "header"
+  "story1"
+  "story2"
+  "story3"
+}
+nav {grid-area: nav;}
+.header {grid-area: header;}
+.story1 {grid-area: story1;}
+.story2 {grid-area: story2;}
+.story3 {grid-area: story3;}
+
+.container4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "nav"
+  "header"
+  "author_bio"
+  "author_works"
+  "storyback";
+}
+nav {grid-area: nav;}
+.header {grid-area: header;}
+.author_bio {grid-area: author_bio;}
+.author_works {grid-area: author_works;}
+.storyback {grid-area: storyback;}
+
+}
