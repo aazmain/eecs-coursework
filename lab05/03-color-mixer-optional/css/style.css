@@ -1,0 +1,29 @@
+body * {
+    box-sizing: border-box;
+}
+label {
+  font-weight: bold;
+  width: 75px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+    line-height: 30px;
+}
+input {
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    width: 100px;
+    padding-left: 10px;
+}
+button {
+    margin-left: 90px;
+    height: 50px;
+    line-height: 30px;
+    font-size: 15px;
+    width: 100px;
+    padding-left: 10px;
+    font-weight: 600;
+    border-radius: 3px;
+    background: #EEE;
+}

@@ -1,0 +1,50 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-rows: 8vh 12vh 10vh 50vh 10vh;
+    grid-template-areas:
+        ". header header ."
+        ". selection selection ."
+        ". computer user ."
+        ". results results ."
+        ". . . .";
+    font-family: Arial;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+header, .selection, .computer-choice, .user-choice, .results {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+.computer-choice, .user-choice, .results {
+     border: solid 4px #000;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+header {
+    grid-area: header;
+}
+header h1 {
+    width: 70vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.selection {
+    grid-area: selection;
+}
+.computer-choice {
+    grid-area: computer;
+}
+.user-choice {
+    grid-area: user;
+}
+.results {
+    grid-area: results;
+}

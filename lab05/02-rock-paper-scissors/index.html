@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+      <meta charset="UTF-8">
+      <title>Lab 05: Rock, Paper, Scissors</title>
+      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+      <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+           Rock <i class="fa fa-hand-rock-o"></i>,
+           Paper <i class="fa fa-hand-paper-o"></i>,
+           Scissors <i class="fa fa-hand-scissors-o"></i>
+       </h1>
+    </header>
+
+    <section class="selection">
+        <p>What do you choose? Rock, paper, or scissors?</p>
+        <select id="user_choice">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+        </select>
+        <button type="button">Go</button>
+    </section>
+    <section class="computer-choice"></section>
+    <section class="user-choice"></section>
+    <section class="results">
+        <div id="output"></div>
+    </section>
+
+    <script  src="js/index.js"></script>
+</body>
+
+</html>
