@@ -1,0 +1,41 @@
+body {
+    font-size: 1.4em;
+    font-family: Arial;
+    margin: 0;
+}
+body * {
+    box-sizing: border-box;
+}
+
+.players {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px;
+    border-bottom: solid 1px #CCC;
+    border-right: solid 1px #CCC;
+    align-items: center;
+    justify-content: center;
+}
+.card, .player-detail {
+    display: flex;
+    box-sizing: border-box;
+    border-top: solid 1px #CCC;
+    border-left: solid 1px #CCC;
+    margin: auto;
+    height: 150px;
+    padding: 10px;
+}
+.card {
+    width: 20%;
+}
+
+img {
+    height: 100%;
+    margin: auto;
+}
+.player-detail {
+    width: 80%;
+}
+.player-detail p {
+    align-self: center;
+}

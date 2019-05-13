@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Image Gallery</title>
+        <link rel="stylesheet" href="css/gallery.css">
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/carousel.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <main>
+            <nav>
+                <button id="flowers-button" type="button">flowers</button>
+                <button id="cars-button" type="button">cars</button>
+                <button id="bikes-button" type="button">bikes</button>
+            </nav>
+            <div class="content">
+                <ul class="cards"></ul>
+            </div>
+            <!-- preview panel -->
+            <section class="preview_box">
+                <div class="featured_image" style=""></div>
+                <button class="close" id="close">&times;</button>
+                <button class="prev" id="prev">&lsaquo;</button>
+                <button class="next" id="next">&rsaquo;</button>
+            </section>
+        </main>
+        <script type="text/javascript" src="js/carousel.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+.featured_image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.next, .prev, .close {
+    position: absolute;
+    font-size: 2.5em;
+    color: white;
+    border-width: 0px;
+    padding-bottom: 5px;
+}
+.close {
+    background: none;
+    top: 0vh;
+    line-height: 1em;
+    right: 0vh;
+}
+.next, .prev {
+    background: rgba(255,255,255,0.2);
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
+}
+.next:hover, .prev:hover, .close:hover {
+    background: rgba(255,255,255,0.4);
+}
+.prev {
+    top: 45vh;
+    left: 2vw;
+}
+.next {
+    top: 45vh;
+    right: 2vw;
+}
+.preview_box {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.preview_box.active {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    background: rgba(255, 255, 255, 1);
+    z-index: 200;
+}
