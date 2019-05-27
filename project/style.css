@@ -91,7 +91,7 @@ html {
   overflow: auto;
   animation-name: fadeIn;
   animation-duration: 1s;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease;
   transition-delay: 0.25s;
 }
 
@@ -145,10 +145,10 @@ html {
   }
 }
 
-.page > * {
+.page > div, .page > p {
   animation-name: fadeIn;
   animation-duration: 1.25s;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease;
 }
 
 @-webkit-keyframes fadeIn {
@@ -168,7 +168,7 @@ html {
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: none;
   }
 }
 
