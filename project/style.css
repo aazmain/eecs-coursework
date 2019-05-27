@@ -45,7 +45,6 @@ p {
 body, html {
   height: 100%;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 * {
@@ -59,6 +58,8 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 /* Homepage styling */
@@ -100,7 +101,7 @@ html {
   animation-name: fadeInHome;
   animation-duration: 1s;
   transition-timing-function: ease;
-  transition-delay: 0.25s;
+  /* transition-delay: 0.25s; */
 }
 
 @-webkit-keyframes fadeInHome {
@@ -108,7 +109,7 @@ html {
     opacity: 0;
     color: white;
     font-weight: bold;
-    transform: translate(0,-50%);
+    transform: translate(-50%,-50%);
     background-color: rgba(0,0,0,0);
     width: 60%;
     padding: 25px;
@@ -129,7 +130,7 @@ html {
     opacity: 0;
     color: white;
     font-weight: bold;
-    transform: translate(0,-50%);
+    transform: translate(-50%,-50%);
     background-color: rgba(0,0,0,0);
     width: 60%;
     padding: 25px;
