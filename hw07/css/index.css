@@ -1,0 +1,225 @@
+body {
+    height:100%;
+    margin:0;
+    padding:0;
+    font-family: Arial;
+}
+body * {
+    box-sizing: border-box;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px calc(100vh - 60px);
+    grid-template-areas:
+       "menu"
+       "gallery";
+    height: 100vh;
+}
+nav {
+    grid-area: menu;
+}
+.content {
+    grid-area: gallery;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: 0;
+    padding-left: 20px;
+    padding-top: 20px;
+    list-style: none;
+    /* transition-duration: 1000ms;
+    transition-property: width, height, margin; */
+}
+.cards .caption {
+    display: none;
+}
+.cards li {
+    width: 25%;
+    height: 50%;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    /* transition-duration: 1000ms;
+    transition-property: width, height, margin; */
+}
+.cards.mosaic li {
+    width: 10%;
+    height: calc((100vh - 60px) / 7);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+.cards.mosaic {
+    height: auto;
+    padding: 0px;
+}
+.cards.eight li {
+    width: 12.5%;
+    height: calc((100vh - 60px) / 4);
+}
+.cards.eight {
+    height: auto;
+}
+.cards.six li {
+    width: 16.666%;
+    height: 33.3333%;
+}
+.cards.four li {
+    width: 25%;
+}
+.cards.two li {
+    width: 50%;
+    height: 100%;
+}
+.image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.card:hover .image {
+    opacity: 0.7;
+}
+
+
+/* carousel styling */
+
+.preview_box .featured_image {
+    width: 60vw;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.preview_box .next, .preview_box .prev, .preview_box .close {
+    position: absolute;
+    font-size: 2.5em;
+    color: white;
+    border-width: 0px;
+    padding-bottom: 5px;
+}
+.preview_box .close {
+    background: none;
+    top: 0vh;
+    line-height: 1em;
+    right: 0vh;
+    color: black
+}
+.preview_box .next, .preview_box .prev {
+    background: rgba(255,255,255,0.2);
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
+}
+.preview_box .next:hover, .preview_box .prev:hover {
+    background: rgba(255,255,255,0.4);
+}
+.preview_box .prev {
+    top: 45vh;
+    left: 1vw;
+}
+.preview_box .next {
+    top: 45vh;
+    right: 41vw;
+}
+.preview_box {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.preview_box .caption {
+    height: 100vh;
+    padding: 20px;
+    width: 40vw;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+.preview_box.active {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    /* flex-direction: row; */
+    background: rgba(255, 255, 255, 1);
+    z-index: 200;
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+    .cards li {
+        width: 50% !important;
+        height: 50% !important;
+    }
+    .cards {
+        height: 100% !important;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .preview_box.active {
+        flex-direction: column;
+    }
+
+    .preview_box .featured_image {
+        width: 100vw;
+        height: 60vh;
+    }
+    .preview_box .caption {
+        width: 100vw;
+        height: 40vh;
+    }
+    .preview_box .prev {
+        top: 30vh;
+        left: 1vw;
+    }
+    .preview_box .next {
+        top: 30vh;
+        right: 1vw;
+    }
+}
+
+@media (max-width: 550px) {
+    .cards li {
+        width: 100%  !important;
+        height: calc(100vh - 50px)  !important;
+        padding: 0px !important;
+    }
+    .cards {
+        padding: 0px !important;
+    }
+    .image:hover {
+        opacity: 1;
+    }
+    .image {
+        height: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .title {
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #444;
+    }
+    .preview_box .featured_image {
+        height: 85vh;
+    }
+    .preview_box .caption {
+        height: 15vh;
+    }
+    .prev, .next, .handle, .likes, .date {
+        display: none;
+    }
+}
